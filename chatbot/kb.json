@@ -540,5 +540,10 @@
     "href": "tel:+4983869919488"
    }
   ]
+ },
+ "handoff": {
+  "tel": "+4983869919488",
+  "telLabel": "08386 9919488",
+  "mail": "info@fleischundwurstnussbaumer.de"
  }
 }

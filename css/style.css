@@ -392,3 +392,5 @@ main img.stock{filter:contrast(1.05) saturate(.68) sepia(.14) brightness(.98)}
 .laden{--paper:var(--clean);background:var(--clean)}
 .anfahrt .ptag{box-shadow:0 10px 18px -14px rgba(0,0,0,.45)}
 .footer{background:var(--red-d) var(--grain);color:#f3e6dc}
+/* Runde 8: Kontrast auf dunklem Grund */
+#allgaeu .kicker{color:#e77a72}
