@@ -1,0 +1,532 @@
+{
+ "version": 1,
+ "site": "https://fleischundwurstnussbaumer.de/",
+ "title": "Fleisch & Wurst Nußbaumer",
+ "assistantName": "Demo-Assistent",
+ "launcherLabel": "Frag die Theke",
+ "avatar": "img/favicon.svg",
+ "placeholder": "z. B. Habt ihr heute offen?",
+ "demoNote": "Demo-Assistent · antwortet nur mit öffentlichen Angaben · sendet nichts",
+ "theme": {
+  "accent": "#24382a",
+  "accent-d": "#16241a",
+  "ink": "#1c1e1b",
+  "paper": "#faf7f1",
+  "gold": "#a3201b",
+  "font": "'Zilla', Georgia, serif",
+  "serif": "'Shoulders', Impact, sans-serif"
+ },
+ "greeting": "Grüß Gott bei Fleisch & Wurst Eva-Maria Nußbaumer in Oberstaufen! Ich helfe bei Fragen zu Öffnungszeiten, Anfahrt und Kontakt.",
+ "chips": [
+  {
+   "label": "Öffnungszeiten"
+  },
+  {
+   "label": "Heute geöffnet?"
+  },
+  {
+   "label": "Anfahrt"
+  },
+  {
+   "label": "Bestellen"
+  }
+ ],
+ "openingHours": {
+  "timeZone": "Europe/Berlin",
+  "days": {
+   "2": [
+    7,
+    14
+   ],
+   "3": [
+    7,
+    14
+   ],
+   "4": [
+    7,
+    18
+   ],
+   "5": [
+    7,
+    18
+   ],
+   "6": [
+    7,
+    14
+   ]
+  },
+  "texts": {
+   "openNow": "Wir haben gerade **geöffnet**.",
+   "laterToday": "Heute öffnen wir noch – ab 7:00 Uhr.",
+   "closedNow": "Für heute haben wir bereits geschlossen.",
+   "closedDay": "Heute ist **Ruhetag** (Sonntag und Montag)."
+  }
+ },
+ "stopwords": [
+  "haben",
+  "habt",
+  "gibt",
+  "gibts",
+  "ihre",
+  "euch",
+  "eure",
+  "eine",
+  "einen",
+  "einem",
+  "einer",
+  "auch",
+  "kann",
+  "koennen",
+  "kostet",
+  "kosten",
+  "wieviel",
+  "viel",
+  "welche",
+  "welcher",
+  "welches",
+  "bitte",
+  "danke",
+  "hallo",
+  "noch",
+  "dass",
+  "sind",
+  "seid",
+  "wird",
+  "werden",
+  "mich",
+  "uns",
+  "unser",
+  "ihnen",
+  "diese",
+  "dieser",
+  "moechte",
+  "moechten",
+  "gerne",
+  "frage",
+  "fuer",
+  "mein",
+  "meine"
+ ],
+ "intents": [
+  {
+   "id": "greet",
+   "keywords": [
+    "hallo",
+    "servus",
+    "gruess gott",
+    "guten tag",
+    "moin",
+    "hi"
+   ],
+   "answer": "Grüß Gott! Wie kann ich helfen?",
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Heute geöffnet?"
+    },
+    {
+     "label": "Anfahrt"
+    },
+    {
+     "label": "Bestellen"
+    }
+   ]
+  },
+  {
+   "id": "thanks",
+   "keywords": [
+    "danke",
+    "vielen dank",
+    "super",
+    "perfekt"
+   ],
+   "answer": "Gern geschehen – bis bald in der Lindauer Straße!",
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Heute geöffnet?"
+    },
+    {
+     "label": "Anfahrt"
+    },
+    {
+     "label": "Bestellen"
+    }
+   ]
+  },
+  {
+   "id": "hours",
+   "weight": 3,
+   "keywords": [
+    "oeffnungszeiten",
+    "geoeffnet",
+    "offen",
+    "aufmachen",
+    "zumachen",
+    "geschlossen",
+    "ruhetag",
+    "montag",
+    "dienstag",
+    "mittwoch",
+    "donnerstag",
+    "freitag",
+    "samstag",
+    "sonntag",
+    "uhrzeit",
+    "wann",
+    "heute",
+    "morgen",
+    "feiertag"
+   ],
+   "answer": "{{status}}\n\n**Öffnungszeiten**\nDi–Mi 7:00–14:00\nDo–Fr 7:00–18:00\nSa 7:00–14:00\nSo & Mo Ruhetag\n\nAn Feiertagen bitte kurz anrufen.",
+   "links": [
+    {
+     "label": "Öffnungszeiten",
+     "href": "#zeiten"
+    },
+    {
+     "label": "08386 9919488 anrufen",
+     "href": "tel:+4983869919488"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Anfahrt"
+    },
+    {
+     "label": "Bestellen"
+    }
+   ]
+  },
+  {
+   "id": "address",
+   "weight": 3,
+   "keywords": [
+    "adresse",
+    "anfahrt",
+    "wo seid",
+    "wo sind",
+    "wo ist",
+    "wo liegt",
+    "wie komme",
+    "route",
+    "navi",
+    "strasse",
+    "lindauer",
+    "oberstaufen",
+    "finden"
+   ],
+   "answer": "**Fleisch & Wurst Eva-Maria Nußbaumer**\nLindauer Straße 6\n87534 Oberstaufen",
+   "links": [
+    {
+     "label": "Route (OpenStreetMap)",
+     "href": "https://www.openstreetmap.org/?mlat=47.55485&mlon=10.02149#map=18/47.55485/10.02149"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Heute geöffnet?"
+    },
+    {
+     "label": "Anfahrt"
+    },
+    {
+     "label": "Bestellen"
+    }
+   ]
+  },
+  {
+   "id": "park",
+   "weight": 3,
+   "keywords": [
+    "parken",
+    "parkplatz",
+    "parkplaetze",
+    "auto"
+   ],
+   "answer": "Zu Parkmöglichkeiten gibt es auf der Website noch keine Angaben. Die Metzgerei liegt in der Lindauer Straße 6, mitten in Oberstaufen.",
+   "links": [
+    {
+     "label": "Route (OpenStreetMap)",
+     "href": "https://www.openstreetmap.org/?mlat=47.55485&mlon=10.02149#map=18/47.55485/10.02149"
+    },
+    {
+     "label": "08386 9919488 anrufen",
+     "href": "tel:+4983869919488"
+    }
+   ]
+  },
+  {
+   "id": "contact",
+   "weight": 2,
+   "keywords": [
+    "telefon",
+    "anrufen",
+    "nummer",
+    "erreichen",
+    "kontakt",
+    "email",
+    "e mail",
+    "mail",
+    "facebook"
+   ],
+   "answer": "**Kontakt**\nTel.: 08386 9919488\nE-Mail: info@fleischundwurstnussbaumer.de",
+   "links": [
+    {
+     "label": "08386 9919488 anrufen",
+     "href": "tel:+4983869919488"
+    },
+    {
+     "label": "E-Mail schreiben",
+     "href": "mailto:info@fleischundwurstnussbaumer.de"
+    },
+    {
+     "label": "Facebook",
+     "href": "https://www.facebook.com/110121218015902"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Heute geöffnet?"
+    },
+    {
+     "label": "Anfahrt"
+    },
+    {
+     "label": "Bestellen"
+    }
+   ]
+  },
+  {
+   "id": "order",
+   "weight": 5,
+   "keywords": [
+    "bestellen",
+    "grillbestellung",
+    "bestellung aufgeben",
+    "aufgeben",
+    "bestellung",
+    "vorbestellen",
+    "reservieren",
+    "abholen",
+    "grillen",
+    "grill",
+    "feier",
+    "party",
+    "platte",
+    "platten",
+    "catering",
+    "belegte semmeln",
+    "semmeln",
+    "liefern",
+    "lieferung"
+   ],
+   "answer": "Für Bestellungen, Platten oder größere Mengen rufen Sie am besten direkt an: **08386 9919488** – oder schreiben Sie eine E-Mail.",
+   "links": [
+    {
+     "label": "08386 9919488 anrufen",
+     "href": "tel:+4983869919488"
+    },
+    {
+     "label": "E-Mail schreiben",
+     "href": "mailto:info@fleischundwurstnussbaumer.de"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    }
+   ]
+  },
+  {
+   "id": "range",
+   "weight": 2,
+   "keywords": [
+    "sortiment",
+    "angebot",
+    "wochenangebot",
+    "angebote",
+    "fleisch",
+    "wurst",
+    "schinken",
+    "leberkaese",
+    "weisswurst",
+    "rind",
+    "schwein",
+    "kalb",
+    "wild",
+    "lamm",
+    "salami",
+    "landjaeger",
+    "speck",
+    "bratwurst",
+    "aufschnitt",
+    "preis",
+    "preise",
+    "kosten",
+    "kilo"
+   ],
+   "answer": "Sortiment, Wochenangebote und Preise stehen noch nicht online – am besten kurz anrufen: **08386 9919488**.",
+   "links": [
+    {
+     "label": "08386 9919488 anrufen",
+     "href": "tel:+4983869919488"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Heute geöffnet?"
+    },
+    {
+     "label": "Anfahrt"
+    },
+    {
+     "label": "Bestellen"
+    }
+   ]
+  },
+  {
+   "id": "lunch",
+   "weight": 3,
+   "keywords": [
+    "mittagstisch",
+    "mittagessen",
+    "mittag",
+    "essen",
+    "imbiss",
+    "warm",
+    "tagesgericht",
+    "speiseplan"
+   ],
+   "answer": "In öffentlichen Kundenbewertungen wird ein Mittagstisch erwähnt – Zeiten und Speiseplan stehen aber noch nicht auf der Website. Am besten kurz anrufen: **08386 9919488**.",
+   "links": [
+    {
+     "label": "08386 9919488 anrufen",
+     "href": "tel:+4983869919488"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Heute geöffnet?"
+    },
+    {
+     "label": "Anfahrt"
+    },
+    {
+     "label": "Bestellen"
+    }
+   ]
+  },
+  {
+   "id": "reviews",
+   "weight": 3,
+   "keywords": [
+    "bewertung",
+    "bewertungen",
+    "sterne",
+    "rezension",
+    "rezensionen",
+    "erfahrungen",
+    "empfehlung"
+   ],
+   "answer": "Laut **Exa Places** (Eintrag „Wurst und Fleisch“) liegt die Durchschnittsbewertung bei **4,9 von 5** bei **39 Bewertungen** (Stand 30.10.2026).",
+   "links": [
+    {
+     "label": "Bewertungen ansehen",
+     "href": "#stimmen"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Heute geöffnet?"
+    },
+    {
+     "label": "Anfahrt"
+    },
+    {
+     "label": "Bestellen"
+    }
+   ]
+  },
+  {
+   "id": "unknown",
+   "weight": 3,
+   "keywords": [
+    "karte zahlen",
+    "kartenzahlung",
+    "ec karte",
+    "bar",
+    "bio",
+    "vegetarisch",
+    "vegan",
+    "glutenfrei",
+    "laktosefrei",
+    "halal",
+    "gutschein",
+    "herkunft",
+    "regional",
+    "eigene herstellung",
+    "schlachtung"
+   ],
+   "answer": "Dazu gibt es auf der Website noch keine Angaben – am besten kurz anrufen: **08386 9919488**.",
+   "links": [
+    {
+     "label": "08386 9919488 anrufen",
+     "href": "tel:+4983869919488"
+    },
+    {
+     "label": "E-Mail schreiben",
+     "href": "mailto:info@fleischundwurstnussbaumer.de"
+    }
+   ],
+   "chips": [
+    {
+     "label": "Öffnungszeiten"
+    },
+    {
+     "label": "Heute geöffnet?"
+    },
+    {
+     "label": "Anfahrt"
+    },
+    {
+     "label": "Bestellen"
+    }
+   ]
+  }
+ ],
+ "menu": {
+  "foundPrefix": "",
+  "links": [],
+  "followChips": [],
+  "sections": []
+ },
+ "fallback": {
+  "text": "Das kann ich leider nicht sicher beantworten – ich kenne nur die öffentlichen Angaben (Öffnungszeiten, Adresse, Kontakt). Rufen Sie gern an: **08386 9919488**.",
+  "links": [
+   {
+    "label": "08386 9919488 anrufen",
+    "href": "tel:+4983869919488"
+   }
+  ]
+ }
+}

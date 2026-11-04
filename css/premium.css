@@ -1,0 +1,69 @@
+/* ===== Premium-Schicht (Runde 5): „Schaufenster & Etikett“ – Metzger-Handwerk als Plakat ===== */
+/* --- Intro: der Rollladen geht hoch, das Offen-Schild schwingt --- */
+.intro{display:none}
+html.intro-on .intro{display:block;position:fixed;inset:0;z-index:1000;cursor:pointer;overflow:hidden;animation:introFailsafe .01s 4s forwards}
+@keyframes introFailsafe{to{visibility:hidden;pointer-events:none}}
+.intro-shutter{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;background:repeating-linear-gradient(180deg,#2c4232 0 22px,#1f3125 22px 24px,#34503b 24px 26px);box-shadow:inset 0 -14px 0 #16241b;transition:transform .75s cubic-bezier(.7,0,.25,1)}
+.intro-sch{font:800 clamp(3.6rem,13vw,10rem)/.85 var(--sten);text-transform:uppercase;color:var(--paper);letter-spacing:.01em;opacity:0;animation:nbIn .5s .1s forwards}
+.intro-sch2{font:600 .85rem/1 var(--disp);letter-spacing:.3em;text-transform:uppercase;color:#e8dcc6;opacity:0;animation:nbIn .5s .35s forwards}
+@keyframes nbIn{to{opacity:1}}
+.intro-offen{position:absolute;left:50%;top:0;transform-origin:50% 0;animation:swing 1.3s .2s ease-out both}
+.io-cord{display:block;width:2px;height:clamp(3rem,10vh,6rem);background:#c9b994;margin:0 auto}
+.io-board{display:block;margin-left:-50%;background:var(--red);color:#fff;font:800 1.4rem/1 var(--disp);letter-spacing:.24em;text-transform:uppercase;padding:.55rem 1.1rem .5rem 1.34rem;border:2px solid #fff;box-shadow:0 10px 20px -8px rgba(0,0,0,.6)}
+@keyframes swing{0%{transform:translateX(-50%) rotate(14deg)}35%{transform:translateX(-50%) rotate(-9deg)}65%{transform:translateX(-50%) rotate(5deg)}100%{transform:translateX(-50%) rotate(0)}}
+.intro-offen{transform:translateX(-50%)}
+.io-board{margin-left:0}
+.intro-skip{position:absolute;right:1.4rem;bottom:1.4rem;background:var(--paper);border:0;color:var(--ink);font:700 .85rem/1 var(--disp);letter-spacing:.18em;text-transform:uppercase;padding:.8rem 1.1rem;cursor:pointer}
+.intro-skip:hover,.intro-skip:focus-visible{background:#fff;outline:2px solid #fff;outline-offset:2px}
+html.intro-out .intro-shutter{transform:translateY(-102%)}
+html.intro-out .intro-offen,html.intro-out .intro-skip{opacity:0;transition:opacity .25s}
+html.intro-out .intro{pointer-events:none}
+
+/* --- Schaufenster: Rahmen, Glasreflex, Fensterbeschriftung --- */
+.schaufenster{border:clamp(8px,1vw,14px) solid var(--green);box-shadow:inset 0 0 0 2px rgba(255,255,255,.15),0 30px 60px -35px rgba(0,0,0,.6)}
+.schaufenster::after{content:"";position:absolute;left:0;right:0;top:0;height:38%;background:linear-gradient(180deg,rgba(20,24,20,.6),rgba(20,24,20,0));z-index:1;pointer-events:none}
+.sf-schrift{position:absolute;left:6%;right:6%;top:3%;width:88%;height:auto;z-index:2;pointer-events:none;overflow:visible}
+.sf-schrift text{font:800 64px/1 var(--disp);text-transform:uppercase;letter-spacing:.06em;fill:#fbf3e1;stroke:#b8913f;stroke-width:1.2px;paint-order:stroke;filter:drop-shadow(0 2px 4px rgba(0,0,0,.5))}
+.sf-schrift .sf-klein{font:600 19px/1 var(--disp);letter-spacing:.26em;stroke:none;fill:#f3e8cf}
+.sf-glas{position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(115deg,transparent 0 38%,rgba(255,255,255,.14) 40%,rgba(255,255,255,.04) 46%,transparent 48% 64%,rgba(255,255,255,.09) 66%,transparent 70%);background-size:220% 100%;background-position:100% 0;transition:background-position 1.6s var(--ease)}
+.hero-photo:hover .sf-glas{background-position:0 0}
+
+/* --- Nummern-Stempel an jedem Kapitel --- */
+section[data-ch-no]{position:relative}
+section[data-ch-no]::before{content:"Nr. " attr(data-ch-no);position:absolute;top:clamp(.8rem,2vw,1.6rem);right:var(--pad);z-index:2;font:800 .95rem/1 var(--sten);letter-spacing:.14em;text-transform:uppercase;color:var(--red);border:2px solid currentColor;padding:.35rem .55rem .3rem;transform:rotate(-4deg);opacity:.9;pointer-events:none}
+.tafel[data-ch-no]::before,.film[data-ch-no]::before{color:#f0d9d2}
+
+/* --- Preisschild-Anzeige (Desktop) --- */
+.tag-ind{position:fixed;left:1.2rem;bottom:1.2rem;z-index:30;display:flex;flex-direction:column;align-items:flex-start;gap:.15rem;padding:.65rem 1.1rem .7rem 2.1rem;background:var(--bon);color:var(--ink);clip-path:polygon(1.1rem 0,100% 0,100% 100%,1.1rem 100%,0 50%);filter:drop-shadow(0 10px 14px rgba(0,0,0,.28));opacity:0;transform:translateY(10px) rotate(-3deg);transition:opacity .4s,transform .4s var(--ease);pointer-events:none}
+.tag-ind.show{opacity:1;transform:rotate(-3deg)}.tag-ind.over-hero,.tag-ind.over-foot{opacity:0;transform:translateY(10px) rotate(-3deg)}
+.ti-hole{position:absolute;left:1.05rem;top:50%;width:.55rem;height:.55rem;margin-top:-.275rem;border-radius:50%;background:var(--paper);box-shadow:inset 0 1px 2px rgba(0,0,0,.35)}
+.ti-no{font:700 .72rem/1 var(--disp);letter-spacing:.2em;text-transform:uppercase;color:var(--red)}
+.ti-no b{font:800 1.1rem/1 var(--sten);letter-spacing:.04em}
+.ti-l{font:800 1.5rem/1 var(--disp);text-transform:uppercase;letter-spacing:.04em}
+
+/* --- Footer als Wurst-Etikett --- */
+.etikett-foot .wrap{position:relative}
+.etikett{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;width:min(100%,34rem);aspect-ratio:1.75/1;margin:0 auto 2rem;border-radius:50%;background:var(--bon);color:var(--ink);box-shadow:0 0 0 6px var(--bon),0 0 0 8px #c9a95a,0 30px 50px -30px rgba(0,0,0,.6);outline:2px solid var(--red-d,#7d1915);outline-offset:-14px;transform:rotate(-4deg);transition:transform .6s var(--ease);padding:1rem 2rem}
+.etikett:hover{transform:rotate(0)}
+.et-oben,.et-unten{font:700 clamp(.62rem,1.6vw,.8rem)/1.2 var(--disp);letter-spacing:.24em;text-transform:uppercase;color:var(--red-d,#7d1915)}
+.et-name{font:800 clamp(2.6rem,8vw,4.6rem)/.9 var(--sten);text-transform:uppercase;margin:.35rem 0 .15rem;letter-spacing:.01em}
+.et-name i{font:700 .7em/1 var(--hand);color:var(--red);text-transform:none;font-style:normal}
+.et-wer{font:400 clamp(1.1rem,3vw,1.5rem)/1.1 var(--hand);margin-bottom:.45rem}
+.et-daten{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;max-width:46rem;margin:0 auto 2.6rem;padding:1rem 0;border-top:1px dashed rgba(243,230,220,.45);border-bottom:1px dashed rgba(243,230,220,.45);text-align:center}
+.et-daten dt{font:700 .7rem/1 var(--disp);letter-spacing:.22em;text-transform:uppercase;color:#f3cfc4;margin-bottom:.4rem}
+.et-daten dd{margin:0;font:400 1.02rem/1.3 var(--body);color:#fff}
+.et-daten a{color:#fff}
+
+/* --- Feinschliff --- */
+.nav a{transition:color .25s}
+#nav-list a:not(.nav-tel a):hover{color:var(--red)}
+
+@media (max-width:1279px){.tag-ind{display:none}}
+@media (max-width:860px){
+  section[data-ch-no]::before{font-size:.8rem;top:.6rem}
+  .sf-schrift text{font-size:72px}
+  .et-daten{grid-template-columns:minmax(0,1fr)}
+  .etikett{aspect-ratio:1.45/1;padding:1rem 1.4rem}
+}
+@media (prefers-reduced-motion:reduce){.intro{display:none!important}.sf-glas,.etikett{transition:none}}
+.etikett-foot .foot-mark{display:none}

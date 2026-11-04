@@ -1,0 +1,8 @@
+@font-face{font-family:'Shoulders';src:url(../fonts/big-shoulders-display-latin-600-normal.woff2) format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Shoulders';src:url(../fonts/big-shoulders-display-latin-800-normal.woff2) format('woff2');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Stencil';src:url(../fonts/big-shoulders-stencil-display-latin-800-normal.woff2) format('woff2');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Zilla';src:url(../fonts/zilla-slab-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Zilla';src:url(../fonts/zilla-slab-latin-400-italic.woff2) format('woff2');font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:'Zilla';src:url(../fonts/zilla-slab-latin-600-normal.woff2) format('woff2');font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:'Kalam';src:url(../fonts/kalam-latin-400-normal.woff2) format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Kalam';src:url(../fonts/kalam-latin-700-normal.woff2) format('woff2');font-weight:700;font-style:normal;font-display:swap}
