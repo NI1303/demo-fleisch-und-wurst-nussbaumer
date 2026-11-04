@@ -13,6 +13,8 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="chatbot/chatbot.css">
 <link rel="stylesheet" href="css/premium.css">
+<!--liebe--><link rel="stylesheet" href="css/liebe.css"><link rel="stylesheet" href="css/liebe-site.css"><!--/liebe-->
+
 <script>document.documentElement.classList.add('js')</script>
 <script>try{if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!sessionStorage.getItem('demo-intro'))document.documentElement.classList.add('intro-on')}catch(e){}</script>
 </head>
@@ -74,5 +76,6 @@
 </footer>
 <script src="js/base.js" defer></script>
 <script src="chatbot/chatbot.js" data-kb="chatbot/kb.json" defer></script>
+<!--liebe--><script type="application/json" id="liebe-cfg">{"underline": [{"sel": ".theke-text h2, .tafel-text h2, .laden-head h2, .film-head h2, .team h2, .stimmen h2, .an-text h2", "style": "brush"}], "notes": [{"at": ".theke-text", "text": "in Bewertungen gelobt: Maultaschen & Leberkäse!", "arrow": "dl", "rot": -3, "m": "inline", "css": {"right": "-2rem", "top": "-2.8rem"}}, {"at": ".laden-head", "text": "mit roten Geranien vor der Tür", "arrow": "dl", "rot": -4, "css": {"right": "2%", "top": "1rem"}}, {"at": ".an-text .ptags", "text": "Di – Sa ab 7 Uhr für Sie da", "arrow": "dl", "rot": -3, "m": "inline", "css": {"right": "0", "top": "-3rem"}}], "lift": ".ptag:not(.off)", "squish": ".tag-cta, .btn, .mobile-bar a", "burst": {"sel": ".tag-cta, a[href^='tel:'], .mobile-bar a", "shape": "heart", "colors": ["#a3201b", "#d9573f", "#24382a"], "n": 7}, "egg": {"at": ".etikett-foot .etikett", "type": "stamp", "autoclose": 6000, "label": "Danke-Stempel aufdrücken", "hint": "Stempel?", "svg": "<svg width='48' height='56' viewBox='0 0 48 56' aria-hidden='true'><rect x='17' y='2' width='14' height='22' rx='7' fill='#7d1915'/><path d='M10 28h28l4 10H6z' fill='#24382a'/><rect x='4' y='38' width='40' height='8' rx='2' fill='#a3201b'/><\/svg>", "msg": "<span class='lv-danke' aria-hidden='true'>Danke!<\/span>Für Ihren Besuch – bis bald an der Theke!", "css": {"bottom": "-.6rem", "right": "-2.4rem"}}, "foot": {"at": ".etikett-foot .wrap", "after": ".foot-cols", "text": "Danke fürs Reinschauen – bis bald in der Lindauer Straße 6!", "top": "Nach oben", "shape": "heart"}, "texture": "kraft"}</script><script src="js/liebe.js" defer></script><!--/liebe-->
 </body>
 </html>

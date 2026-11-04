@@ -16,7 +16,7 @@
   "font": "'Zilla', Georgia, serif",
   "serif": "'Shoulders', Impact, sans-serif"
  },
- "greeting": "Grüß Gott bei Fleisch & Wurst Eva-Maria Nußbaumer in Oberstaufen! Ich helfe bei Fragen zu Öffnungszeiten, Anfahrt und Kontakt.",
+ "greeting": "Grüß Gott und schön, dass Sie vorbeischauen! Hier ist der Demo-Assistent von Fleisch & Wurst Eva-Maria Nußbaumer in Oberstaufen. Fragen Sie mich gern nach Öffnungszeiten, Anfahrt oder Kontakt – ich helfe, so gut ich kann.",
  "chips": [
   {
    "label": "Öffnungszeiten"
@@ -218,7 +218,19 @@
     "strasse",
     "lindauer",
     "oberstaufen",
-    "finden"
+    "finden",
+    "wo finde",
+    "finde ich",
+    "wo finden",
+    "wo seid ihr",
+    "wo genau",
+    "wie kommt man",
+    "komme ich hin",
+    "hinkommen",
+    "hinfahren",
+    "wegbeschreibung",
+    "standort",
+    "anschrift"
    ],
    "answer": "**Fleisch & Wurst Eva-Maria Nußbaumer**\nLindauer Straße 6\n87534 Oberstaufen",
    "links": [

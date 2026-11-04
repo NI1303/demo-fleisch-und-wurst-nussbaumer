@@ -1,0 +1,18 @@
+/* Fleisch & Wurst Nußbaumer – liebevolle Details (Schaufenster, Etikett, Metzgerpapier). Wird von liebe_inject.py nicht überschrieben. */
+:root{--lv-hand:'Kalam',cursive;--lv-ink:#a3201b;--lv-ul:#a3201b;--lv-tex-o:.4;--lv-note-fs:1.3rem;--lv-note-fw:700;--lv-ul-w:220px}
+.tafel,.film{--lv-ul:#e9d8b4;--lv-ink:#f0e2c4}
+.ptag.lv-lift{transform-origin:50% 0}
+@media (hover:hover){.ptag.lv-lift:hover{translate:0 2px;rotate:-4deg}}
+.etikett{position:relative}
+.lv-egg-stamp{flex-direction:column;align-items:flex-end;--lv-egg-ink:#a3201b;--lv-egg-fs:1.2rem}
+.lv-egg-stamp .lv-egg-btn svg{transition:transform .25s ease}
+.lv-egg-stamp.lv-egg-on .lv-egg-btn svg{animation:lvStampDown .5s ease}
+@keyframes lvStampDown{40%{transform:translateY(10px) scaleY(.92)}100%{transform:none}}
+.lv-egg-stamp .lv-egg-msg{position:absolute;left:calc(100% + .5rem);top:-1.6rem;width:13rem;text-align:left;background:#f7efe0;padding:.5rem .7rem;box-shadow:0 8px 20px -10px rgba(0,0,0,.4);rotate:2deg}
+.lv-danke{display:block;font:400 2.2rem/1 'Stencil',sans-serif;color:#a3201b;border:3px solid #a3201b;border-radius:6px;padding:.1rem .5rem .2rem;margin:0 0 .35rem;width:max-content;rotate:-6deg;opacity:.88;mix-blend-mode:multiply}
+.lv-egg-stamp:not(.lv-egg-on) .lv-egg-msg{pointer-events:none}
+.etikett-foot .lv-foot{--lv-foot-heart:#a3201b}
+@media (max-width:899px){.lv-egg-stamp{bottom:-1.4rem!important;right:-.4rem!important}.lv-egg-stamp .lv-egg-msg{left:auto;top:auto;bottom:100%;right:0;text-align:right}}
+@media (prefers-reduced-motion:reduce){.lv-egg-stamp.lv-egg-on .lv-egg-btn svg{animation:none}}
+.lv-404{--lv-404-bg:#ede3d1;--lv-404-ink:#24382a;--lv-404-accent:#a3201b;--lv-404-font:'Zilla',Georgia,serif;--lv-404-display:'Shoulders','Zilla',sans-serif;--lv-404-r:4px;--lv-404-hw:700}
+.lv-404-art{color:#24382a}
